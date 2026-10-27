@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NecroCode — Ghost in the Machine | Hacktoberfest 2026</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👻</text></svg>">
+</head>
+<body class="scanlines">
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="brand-icon">👻</div>
+      <div class="brand-text">
+        <h1>NecroCode</h1>
+        <p>The Open-Source Codebase Necromancer & Spectral Auditor</p>
+      </div>
+    </div>
+
+    <!-- Center Navigation Tabs -->
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="crypt-tab">⚰️ The Crypt & Audit</button>
+      <button class="tab-btn" data-tab="altar-tab">⚡ Modernization Altar</button>
+      <button class="tab-btn" data-tab="seance-tab">🔮 Séance Chamber</button>
+      <button class="tab-btn" data-tab="vault-tab">🏛️ Graveyard Vault</button>
+    </nav>
+
+    <!-- Header Badges & Ambient Audio -->
+    <div class="header-badges">
+      <button id="btn-ambient" class="badge" title="Synthesize eerie ambient audio via Web Audio API">
+        🔇 Crypt Atmosphere: Muted
+      </button>
+      <span class="badge badge-gemma">Google Gemma 2 (Open Weights)</span>
+      <span class="badge badge-active">Sentry Agent Tracing</span>
+    </div>
+  </header>
+
+  <!-- Main Application Body -->
+  <main>
+    <!-- TAB 1: THE CRYPT & CEMETERY AUDIT -->
+    <div id="crypt-tab" class="tab-content active">
+      <div class="grid-2">
+        <!-- Code Input & Presets -->
+        <div class="card">
+          <div class="card-title">
+            <span>📜 Summon Dormant Codebase</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Python 2 / Legacy Concurrency</span>
+          </div>
+
+          <div class="presets-bar">
+            <span style="font-size: 0.75rem; color: var(--text-muted); align-self: center;">Preserved Relics:</span>
+            <button class="preset-chip selected" data-sample="legacy_crypto">Python 2 MD5 Crypt (2012)</button>
+            <button class="preset-chip" data-sample="haunted_concurrency">Haunted Race Condition (2015)</button>
+            <button class="preset-chip" data-sample="abandoned_cli">Abandoned TLS/Pickle CLI (2016)</button>
+          </div>
+
+          <textarea id="code-area" class="code-area" placeholder="Paste dormant or legacy source code here..."></textarea>
+
+          <div class="btn-row">
+            <button id="btn-audit" class="btn btn-primary">
+              🔮 Summon Cemetery Audit
+            </button>
+            <button id="btn-resurrect" class="btn btn-spectral">
+              ⚡ Cast Resurrection Ritual
+            </button>
+          </div>
+        </div>
+
+        <!-- Cemetery Audit Diagnostics -->
+        <div class="card" id="audit-results-card">
+          <div class="card-title">
+            <span>🔬 Spectral Audit Diagnostics</span>
+            <span id="findings-context-tag" style="font-size: 0.75rem; color: var(--spectral-purple);">Waiting for ritual...</span>
+          </div>
+
+          <!-- Gauge -->
+          <div class="gauge-container">
+            <div id="rot-score-circle" class="rot-circle rot-high">
+              <span id="rot-score-num" class="rot-number">88</span>
+              <span class="rot-label">Bit Rot Score</span>
+            </div>
+            <div class="cemetery-stats">
+              <div>Cemetery Status: <strong id="cemetery-status-text">Haunted Legacy</strong></div>
+              <div>Estimated Hibernation: <strong id="years-dormant-text">~12.4 Years</strong></div>
+              <div>Open Innovation: <strong style="color:var(--ectoplasm-green);">100% Local Inference</strong></div>
+            </div>
+          </div>
+
+          <!-- Epitaph -->
+          <div id="spectral-epitaph" class="epitaph-box">
+            "Here lies an unmaintained script from 2012. It carries the curse of MD5 collision attacks and deprecated syntax."
+          </div>
+
+          <!-- Detected Anomalies List -->
+          <div style="font-size: 0.85rem; font-weight: 600; margin-top: 0.5rem;">Detected Spectral Anomalies:</div>
+          <div id="findings-list" class="findings-list">
+            <div class="finding-item">
+              <div class="finding-header">
+                <strong>Python 2 Bare Print Statement</strong>
+                <span class="sev-tag sev-CRITICAL">CRITICAL</span>
+              </div>
+              <div style="color: var(--text-muted); font-size: 0.75rem;">SyntaxError on modern Python 3.12+ runtimes.</div>
+              <div style="color: var(--ectoplasm-green); font-size: 0.75rem;">⚰️ <strong>Remedy:</strong> Transpile into standard print() call or f-string.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: MODERNIZATION ALTAR (DIFFS, TESTS, DOCKER) -->
+    <div id="altar-tab" class="tab-content">
+      <div class="card">
+        <div class="card-title">
+          <span>⚡ Unified Necromancy Diffs</span>
+          <span style="font-size: 0.75rem; color: var(--ectoplasm-green);">Transmutation Complete</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          Inspect the exact unified diffs generated by the open-weight AST transformer. Legacy vulnerabilities and syntax rot are purged.
+        </p>
+        <div id="diff-container">
+          <pre class="diff-view">Run the Resurrection Ritual on Tab 1 to generate unified modernization diffs.</pre>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top: 1.25rem;">
+        <!-- Modernization Scroll -->
+        <div class="card">
+          <div class="card-title">
+            <span>📜 Transmutations Performed</span>
+          </div>
+          <ul id="notes-container" style="padding-left: 1.25rem; color: var(--text-main);">
+            <li style="font-size:0.85rem;">Run resurrection ritual to view modernized transformations.</li>
+          </ul>
+        </div>
+
+        <!-- Generated Pytest Suite -->
+        <div class="card">
+          <div class="card-title">
+            <span>🧪 Auto-Synthesized Pytest Suite</span>
+          </div>
+          <pre id="tests-container" class="diff-view" style="max-height: 200px;"># Self-healing test suite will appear here</pre>
+        </div>
+      </div>
+
+      <!-- Dockerfile Card -->
+      <div class="card" style="margin-top: 1.25rem;">
+        <div class="card-title">
+          <span>🐳 Modern Multi-Stage Dockerfile (Non-Root Hardened)</span>
+        </div>
+        <pre id="dockerfile-container" class="diff-view" style="max-height: 180px;"># Modern Docker container ready for Render Cloud</pre>
+      </div>
+    </div>
+
+    <!-- TAB 3: SEANCE CHAMBER (GHOST IN THE MACHINE CHAT & TELEMETRY) -->
+    <div id="seance-tab" class="tab-content">
+      <div class="seance-container">
+        <!-- Chat Area -->
+        <div class="chat-box">
+          <div class="card-title" style="padding: 0.75rem 1rem; margin-bottom: 0;">
+            <span>🔮 Séance with the Maintainer Ghost</span>
+            <span style="font-size:0.75rem; color: var(--spectral-purple);">Powered by Google Gemma & ElevenLabs</span>
+          </div>
+
+          <div id="chat-messages" class="chat-messages">
+            <div class="chat-msg msg-ghost">
+              <span style="font-size:0.7rem; color:var(--spectral-purple); display:block; font-family:var(--font-mono); margin-bottom:0.25rem;">👻 Ghost Maintainer [WAKING]</span>
+              I am the spirit of the maintainer who built this code years ago before life moved on. Why have you awakened my dormant repository from the cemetery of GitHub?
+            </div>
+          </div>
+
+          <div class="quick-prompts">
+            <button class="quick-chip">Why did you abandon this repository?</button>
+            <button class="quick-chip">Explain the race condition haunting the code.</button>
+            <button class="quick-chip">How does open-source AI grant you eternal life?</button>
+            <button class="quick-chip">What is the secret to banishing zombie threads?</button>
+          </div>
+
+          <div class="chat-input-bar">
+            <input type="text" id="seance-input" placeholder="Speak with the Ghost in the Machine...">
+            <button id="seance-send-btn" class="btn btn-primary" style="padding: 0.5rem 1rem;">Summon</button>
+          </div>
+        </div>
+
+        <!-- Telemetry Inspector (Sentry Agent Tracing) -->
+        <div class="telemetry-inspector">
+          <div class="card-title" style="margin-bottom: 0.5rem;">
+            <span>📡 Sentry Agent Trace Inspector</span>
+            <span style="font-size:0.7rem; color:var(--ectoplasm-green);">Live Spans</span>
+          </div>
+          <p style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.5rem;">
+            Real-time telemetry of multi-agent reasoning steps, tool invocations, and open-weight model queries.
+          </p>
+          <div id="telemetry-span-list" class="span-list">
+            <div class="span-card">
+              <span class="span-time">12ms</span>
+              <div style="font-weight:bold; color:var(--spectral-purple);">system.init</div>
+              <div style="color:var(--text-muted); font-size:0.7rem;">Agent harness listening on localhost</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: GRAVEYARD VAULT (MONGODB ATLAS PERSISTENCE) -->
+    <div id="vault-tab" class="tab-content">
+      <div class="card">
+        <div class="card-title">
+          <span>🏛️ The Open-Source Graveyard Vault</span>
+          <span style="font-size:0.75rem; color:var(--phantom-cyan);">Backed by MongoDB Atlas</span>
+        </div>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom: 0.75rem;">
+          Registry of historical open-source projects discovered in the cemetery, audited for bit rot, and resurrected with verified test suites.
+        </p>
+
+        <table class="graveyard-table">
+          <thead>
+            <tr>
+              <th>Repository Relic</th>
+              <th>Bit Rot Score</th>
+              <th>Cemetery Status</th>
+              <th>Resurrection State</th>
+              <th>Epitaph</th>
+              <th>Date Cataloged</th>
+            </tr>
+          </thead>
+          <tbody id="graveyard-tbody">
+            <tr>
+              <td colspan="6" style="text-align:center; color:var(--text-muted);">Loading crypt records...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer style="text-align:center; padding: 2rem 1rem; color: var(--text-muted); font-size: 0.8rem; border-top: 1px solid var(--border-color); margin-top: 3rem;">
+    <p>
+      Built for the <strong>Hacktoberfest 2026 Open-Source AI Challenge: Week 4 ("Ghost in the Machine")</strong>
+    </p>
+    <p style="margin-top: 0.25rem;">
+      Empowered by <strong>Google Gemma</strong> • <strong>Render</strong> • <strong>Sentry Agent Tracing</strong> • <strong>ElevenLabs</strong> • <strong>MongoDB Atlas</strong>
+    </p>
+  </footer>
+
+  <script src="/static/js/spectral_audio.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

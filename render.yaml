@@ -1,0 +1,31 @@
+# Render Blueprint Configuration for NecroCode
+# Hacktoberfest 2026: Ghost in the Machine
+services:
+  - type: web
+    name: necrocode-ghost-engine
+    runtime: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /api/health
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: HOST
+        value: 0.0.0.0
+      - key: GEMMA_PROVIDER
+        value: heuristic_local
+      - key: GEMMA_MODEL
+        value: google/gemma-2-9b-it
+      - key: SENTRY_TRACES_SAMPLE_RATE
+        value: "1.0"
+      - key: SENTRY_DSN
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: ELEVENLABS_VOICE_ID
+        value: pNInz6obpgDQGcFmaJgB
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DATABASE
+        value: necrocode_graveyard
